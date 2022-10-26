@@ -7,6 +7,7 @@
 
 #IMPORT's
 import numpy as np
+import os
 
 
 #FUNCTIONS
@@ -15,6 +16,7 @@ def menu():
 
 
 #MAIN
-
+os.system("cls")
+menu()
 
 
