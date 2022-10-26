@@ -19,15 +19,15 @@ import os
 def menu():
     print("Hola Mundo")
     print("0|Finalizar")
-    resp = input("Inserte respuesta: ")
-    return resp
+    temp = input("Inserte respuesta: ")
+    return temp
 
 #GLOBAL VARIABLES
-resp = 0
+respWhile = 0
 
 #MAIN
 os.system("cls")
-while resp != "0":
+while respWhile != "0":
     resp = menu()
 
 
