@@ -10,7 +10,9 @@ Elementos evaluados:
 #IMPORT's
 import numpy as np
 import os
+import time
 from functions import mensajes
+
 
 """ FUNCTIONS
 
@@ -19,7 +21,8 @@ from functions import mensajes
 def menu():
     temp = 1
     while temp != "0":
-        print("\nMENU")
+        os.system("cls")
+        print("MENU")
         print("0|Finalizar")
         print("1|Agregar un trabajador")
         print("2|Agregar una sucursal")
@@ -27,8 +30,28 @@ def menu():
         print("4|Actualizar un trabajador")
         print("5|Actualizar una sucursal")
         print("6|Actualizar un producto")
-        print("6|Actualiar stock")
+        print("7|Actualiar stock")
         temp = input("Inserte respuesta: ")
+
+
+        if temp == "1":
+            addTrabajador()
+        elif temp == "2":
+            addSucursal()
+        elif temp == "3":
+            addProducto()
+        elif temp == "4":
+            setProducto()
+        elif temp == "5":
+            setSucursal()
+        elif temp == "6":
+            setProducto()
+        elif temp == "7":
+            setStock()
+        else:
+            print("Respuesta invalida, vuelva a intentarlo")
+            time.sleep(1)
+            
     return temp
 
 #LECTURA DE ARCHIVOS    
@@ -94,6 +117,42 @@ def escritura():
 
     mensajes.escrituraArchivosFin()
 
+#AGREGAR TRABAJADOR
+def addTrabajador():
+    os.system("cls")
+    print("AGREGAR TRABAJADOR:")
+    time.sleep(1)
+
+#AGREGAR SUCURSAL
+def addSucursal():
+    os.system("cls")
+    print("AGREGAR SUCURSAL:")
+
+#AGREGAR PRODUCTO
+def addProducto():
+    os.system("cls")
+    print("AGREGAR PRODUCTO:")
+
+#ACTUALIZAR TRABAJADOR
+def setTrabajador():
+    os.system("cls")
+    print("ACTUALIZAR TRABAJADOR:")
+
+#ACTUALIZAR SUCURSAL
+def setSucursal():
+    os.system("cls")
+    print("ACTUALIZAR SUCURSAL:")
+
+#ACTUALIZAR PRODUCTO
+def setProducto():
+    os.system("cls")
+    print("ACTUALIZAR PRODUCTO:")
+
+#ACTUALIZAR STOCK
+def setStock():
+    os.system("cls")
+    print("ACTUALIZAR STOCK:")
+
 #GLOBAL VARIABLES
 trabajadores = []
 trabajador = []
@@ -108,7 +167,10 @@ os.system("cls")
 mensajes.saludo()
 lectura()
 
-menu()
+resp = menu()
+
+
+
 
 escritura()
 mensajes.despedida()
