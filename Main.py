@@ -49,7 +49,7 @@ respWhile = 0
 #MAIN
 os.system("cls")
 while respWhile != "0":
-    resp = menu()
+    respWhile = menu()
 
 
 print("Gracias por trabajar con nosotros.")
