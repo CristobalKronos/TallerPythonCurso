@@ -78,10 +78,13 @@ def lectura():
     linea = archivo.readline().strip()
     while(linea != ""):
         partes=linea.split(",")
-        parteA=partes[0].upper()
-        parteB=partes[1].upper()
-        print(parteA,parteB)
+        for i in partes:
+            sucursal.append(i.upper())
+        print(sucursal)
+        sucursales.append(sucursal.copy())
+        sucursal.clear()
         linea = archivo.readline().strip()
+    print(sucursales)
     archivo.close()
 
     #Productos
@@ -89,10 +92,13 @@ def lectura():
     linea = archivo.readline().strip()
     while(linea != ""):
         partes=linea.split(",")
-        parteA=partes[0].upper()
-        parteB=partes[1].upper()
-        print(parteA,parteB)
+        for i in partes:
+            producto.append(i.upper())
+        print(producto)
+        productos.append(producto.copy())
+        producto.clear()
         linea = archivo.readline().strip()
+    print(productos)
     archivo.close()
 
     #Stock
@@ -100,10 +106,9 @@ def lectura():
     linea = archivo.readline().strip()
     while(linea != ""):
         partes=linea.split(",")
-        parteA=partes[0].upper()
-        parteB=partes[1].upper()
-        parteC=partes[2].upper()
-        print(parteA,parteB,parteC)
+        for i in partes:
+            stock.append(i.upper())
+        print(stock)
         linea = archivo.readline().strip()
     archivo.close()
 
