@@ -129,7 +129,11 @@ def escritura():
 def addTrabajador():
     os.system("cls")
     print("AGREGAR TRABAJADOR:")
-    #Solicitar 
+    #Solicitar datos del trabajador
+    #Buscar trabajador
+    #Solicitar cambios a realizar
+    #Realizar los cambios
+    #Informar que los cambios están hechos
 
     time.sleep(1)
 
