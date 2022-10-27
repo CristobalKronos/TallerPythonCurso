@@ -1,1 +1,12 @@
-Esto es un enunciado, saludos
+La empresa Wellmert tiene problemas para mantener los registros de empleados pertenecientes a las distintas sucursales,
+junto con el seguimiento del stock de sus locales repartidos en distintas partes del país, por lo que ha solicitado
+hacer un programa en python que permita gestionar el stock de los productos y tener un registro de los trabajadores.
+
+La empresa dispone de los siguientes archivos con su respectivo formato:
+Trabajadores: Nombre, Cargo, Sueldo, IdSurursal
+Sucursal: IdSurursal, Ciudad
+Producto: IdProducto, Nombre
+Stock: IdSucursal, Producto, Cantidad
+
+El programa debe ser capaz de leer los archivos y guardar los cambios, poder agregar nuevos datos y borrar los ya existentes
+y, finalmente poder graficar la cantidad de stock por sucursal, junto con los sueldos promedio de los locales.
