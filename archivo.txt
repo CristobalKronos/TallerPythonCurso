@@ -1,1 +1,6 @@
 Ayuda, estoy en un archivo
+
+Trabajadores: Nombre, Cargo, Sueldo, IdSurursal
+Sucursal: IdSurursal, Nombre, Ciudad
+Producto: IdProducto, Nombre
+Stock: IdSucursal, Producto, Cantidad

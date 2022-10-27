@@ -21,3 +21,15 @@ def lecturaArchivosFin():
     print("Guardando archivos")
     time.sleep(1)
     print("Fin de la lectura de archivos")
+
+def escrituraArchivosInicio():
+    print("Guardando los cambios.")
+    time.sleep(1)
+    print(".")
+    time.sleep(1)
+    print("..")
+    time.sleep(1)
+    print("...")
+
+def escrituraArchivosFin():
+    print("Los cambios han sido guardados.")

@@ -42,12 +42,11 @@ def lectura():
     mensajes.lecturaArchivosFin()
 
 #ESCRITURA DE ARCHIVOS
-def Escritura():
-    print("Iniciando la escritura de archivos.")    
+def escritura():
+    mensajes.escrituraArchivosInicio() 
 
 
-
-    print("Fin de la escritura de archivos.")
+    mensajes.escrituraArchivosFin()
 
 #GLOBAL VARIABLES
 respWhile = 0
@@ -61,5 +60,5 @@ lectura()
 while respWhile != "0":
     respWhile = menu()
 
-
+escritura()
 mensajes.despedida()
