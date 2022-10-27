@@ -2,7 +2,7 @@
 import time
 
 def saludo():
-    print("Bienvenidos al programa.")
+    print("Bienvenidos al programa.\n")
     time.sleep(1)
 
 def despedida():
@@ -15,21 +15,21 @@ def lecturaArchivoInicio():
     time.sleep(1)
     print("..")
     time.sleep(1)
-    print("...")
+    print("...\n")
 
 def lecturaArchivosFin():
-    print("Guardando archivos")
+    print("Cargando archivos.")
     time.sleep(1)
-    print("Fin de la lectura de archivos")
+    print("Fin de la lectura de archivos.\n")
 
 def escrituraArchivosInicio():
-    print("Guardando los cambios.")
+    print("\nGuardando los cambios.")
     time.sleep(1)
     print(".")
     time.sleep(1)
     print("..")
     time.sleep(1)
-    print("...")
+    print("...\n")
 
 def escrituraArchivosFin():
-    print("Los cambios han sido guardados.")
+    print("Los cambios han sido guardados.\n")

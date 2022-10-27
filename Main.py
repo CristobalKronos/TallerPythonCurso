@@ -20,9 +20,11 @@ from functions import mensajes
 """
 #MENU
 def menu():
-    print("Hola Mundo")
-    print("0|Finalizar")
-    temp = input("Inserte respuesta: ")
+    temp = 1
+    while temp != "0":
+        print("\nMENU")
+        print("0|Finalizar")
+        temp = input("Inserte respuesta: ")
     return temp
 
 #LECTURA DE ARCHIVOS    
@@ -49,16 +51,17 @@ def escritura():
     mensajes.escrituraArchivosFin()
 
 #GLOBAL VARIABLES
-respWhile = 0
-
-
+trabajadores = 0
+sucursales=0
+productos=0
+stock=0
 
 #MAIN
 os.system("cls")
 mensajes.saludo()
 lectura()
-while respWhile != "0":
-    respWhile = menu()
+
+menu()
 
 escritura()
 mensajes.despedida()
