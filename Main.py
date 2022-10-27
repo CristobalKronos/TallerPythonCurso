@@ -31,6 +31,8 @@ def menu():
         print("5|Actualizar una sucursal")
         print("6|Actualizar un producto")
         print("7|Actualiar stock")
+        #print("8|Graficar X")
+        #print("9|Graficar Y")
         temp = input("Inserte respuesta: ")
 
 
@@ -116,6 +118,7 @@ def lectura():
     mensajes.lecturaArchivosFin()
 
 #ESCRITURA DE ARCHIVOS
+#TODO: Iniciar la escritura y update
 def escritura():
     mensajes.escrituraArchivosInicio() 
 
@@ -126,6 +129,8 @@ def escritura():
 def addTrabajador():
     os.system("cls")
     print("AGREGAR TRABAJADOR:")
+    #Solicitar 
+
     time.sleep(1)
 
 #AGREGAR SUCURSAL
