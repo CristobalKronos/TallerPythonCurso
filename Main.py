@@ -1,9 +1,6 @@
 """ Documents
     Nombre: Cristóbal Osses Obreque
 
-    Enunciado:
-        a
-
 Elementos evaluados:
     Lectura de archivos (txt o csv)
     Estructuras de almacenamiento
@@ -24,6 +21,13 @@ def menu():
     while temp != "0":
         print("\nMENU")
         print("0|Finalizar")
+        print("1|Agregar un trabajador")
+        print("2|Agregar una sucursal")
+        print("3|Agregar un producto")
+        print("4|Actualizar un trabajador")
+        print("5|Actualizar una sucursal")
+        print("6|Actualizar un producto")
+        print("6|Actualiar stock")
         temp = input("Inserte respuesta: ")
     return temp
 
@@ -39,7 +43,7 @@ def lectura():
         for i in partes:
             trabajador.append(i.upper())
         print(trabajador)
-        trabajadores.append(trabajador)
+        trabajadores.append(trabajador.copy())
         trabajador.clear()
         linea = archivo.readline().strip()
     
