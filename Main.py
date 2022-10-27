@@ -28,7 +28,7 @@ def menu():
 #LECTURA DE ARCHIVOS    
 def lectura():
     mensajes.lecturaArchivoInicio()
-    archivo = open("archivo.txt","r")
+    archivo = open("./recursos/enunciado.txt","r")
     linea = archivo.readline().strip()
     while(linea != ""):
         partes=linea.split(",")
