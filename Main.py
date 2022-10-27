@@ -13,17 +13,38 @@ Elementos evaluados:
 #IMPORT's
 import numpy as np
 import os
+from functions import Mensajes
 
+""" FUNCTIONS
 
-#FUNCTIONS
+"""
+#MENU
 def menu():
     print("Hola Mundo")
     print("0|Finalizar")
     temp = input("Inserte respuesta: ")
     return temp
 
+#LECTURA DE ARCHIVOS    
+def lectura():
+    print("Iniciando lectura de archivos.")
+
+
+
+    print("Fin de la lectura.")
+
+#ESCRITURA DE ARCHIVOS
+def Escritura():
+    print("Iniciando la escritura de archivos.")
+
+
+
+    print("Fin de la escritura de archivos.")
+
 #GLOBAL VARIABLES
 respWhile = 0
+
+
 
 #MAIN
 os.system("cls")
