@@ -5,6 +5,7 @@ Elementos evaluados:
     Lectura de archivos (txt o csv)
     Estructuras de almacenamiento
     Graficos de la información otorgada, mínimo 2 gráficos
+    colab.research.google.com
 """
 
 #IMPORT's
@@ -130,9 +131,9 @@ def addTrabajador():
     os.system("cls")
     print("AGREGAR TRABAJADOR:")
     #Solicitar datos del trabajador
-    #Buscar trabajador
-    #Solicitar cambios a realizar
-    #Realizar los cambios
+    #Buscar si ya está el trabajador
+    #De estar el trabajador, mandar un aviso y terminar la función
+    #De no estar el trabajdor, agregarlo al final de la lista
     #Informar que los cambios están hechos
 
     time.sleep(1)
@@ -141,31 +142,65 @@ def addTrabajador():
 def addSucursal():
     os.system("cls")
     print("AGREGAR SUCURSAL:")
+    #Solicitar datos de la sucursal
+    #Buscar si ya está la sucursal
+    #De estar la sucursal, mandar un aviso y terminar la función
+    #De no estar la sucursal, agregarla al final de la lista
+    #Informar que los cambios están hechos
 
 #AGREGAR PRODUCTO
 def addProducto():
     os.system("cls")
     print("AGREGAR PRODUCTO:")
+    #Solicitar datos del producto
+    #Buscar si ya está el producto
+    #De estar el producto, mandar un aviso y terminar la función
+    #De no estar el producto, agregarlo al final de la lista
+    #Informar que los cambios están hechos
 
 #ACTUALIZAR TRABAJADOR
 def setTrabajador():
     os.system("cls")
     print("ACTUALIZAR TRABAJADOR:")
+    #Solicitar datos del trabajador
+    #Buscar si ya está el trabajador
+    #De no estar el trabajdor, mandar aviso y terminar la función
+    #De estar el trabajador, solicitar los nuevos datos
+    #Actualizar la información del trabajador
+    #Informar que los cambios están hechos
 
 #ACTUALIZAR SUCURSAL
 def setSucursal():
     os.system("cls")
     print("ACTUALIZAR SUCURSAL:")
+    #Solicitar datos de la sucursal
+    #Buscar si ya está la sucursal
+    #De no estar la sucursal, mandar aviso y terminar la función
+    #De estar la sucursal, solicitar los nuevos datos
+    #Actualizar la información de la sucursal
+    #Informar que los cambios están hechos
 
 #ACTUALIZAR PRODUCTO
 def setProducto():
     os.system("cls")
     print("ACTUALIZAR PRODUCTO:")
+    #Solicitar datos del producto
+    #Buscar si ya está el producto
+    #De no estar el producto, mandar aviso y terminar la función
+    #De estar el producto, solicitar los nuevos datos
+    #Actualizar la información del producto
+    #Informar que los cambios están hechos
 
 #ACTUALIZAR STOCK
 def setStock():
     os.system("cls")
     print("ACTUALIZAR STOCK:")
+    #Solicitar los cambios a realizar
+    #Buscar si ya existe la sucursal y el producto
+    #De faltar uno de ellos, mandar aviso y terminar la función
+    #De estar los dos, verificar si los cambios son congruentes (No eliminar más de lo que realmente hay)
+    #De estar todo en orden, agregar los cambios al final de la lista
+    #Informar que los cambios están hechos
 
 #GLOBAL VARIABLES
 trabajadores = []
