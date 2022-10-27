@@ -36,12 +36,14 @@ def lectura():
     linea = archivo.readline().strip()
     while(linea != ""):
         partes=linea.split(",")
-        parteA=partes[0].upper()
-        parteB=partes[1].upper()
-        parteC=partes[2].upper()
-        parteD=partes[3].upper()
-        print(parteA,parteB,parteC,parteD)
+        for i in partes:
+            trabajador.append(i.upper())
+        print(trabajador)
+        trabajadores.append(trabajador)
+        trabajador.clear()
         linea = archivo.readline().strip()
+    
+    print(trabajadores)
     archivo.close()
 
     #Sucursales
