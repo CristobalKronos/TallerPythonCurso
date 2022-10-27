@@ -1,0 +1,2 @@
+Kronos, Vendedor, 10000, 1
+Leion, Empacador, 15000, 2

@@ -30,13 +30,51 @@ def menu():
 #LECTURA DE ARCHIVOS    
 def lectura():
     mensajes.lecturaArchivoInicio()
-    archivo = open("./recursos/enunciado.txt","r")
+
+    #Trabajdores
+    archivo = open("./recursos/trabajadores.txt","r")
+    linea = archivo.readline().strip()
+    while(linea != ""):
+        partes=linea.split(",")
+        parteA=partes[0].upper()
+        parteB=partes[1].upper()
+        parteC=partes[2].upper()
+        parteD=partes[3].upper()
+        print(parteA,parteB,parteC,parteD)
+        linea = archivo.readline().strip()
+    archivo.close()
+
+    #Sucursales
+    archivo = open("./recursos/sucursales.txt","r")
     linea = archivo.readline().strip()
     while(linea != ""):
         partes=linea.split(",")
         parteA=partes[0].upper()
         parteB=partes[1].upper()
         print(parteA,parteB)
+        linea = archivo.readline().strip()
+    archivo.close()
+
+    #Productos
+    archivo = open("./recursos/productos.txt","r")
+    linea = archivo.readline().strip()
+    while(linea != ""):
+        partes=linea.split(",")
+        parteA=partes[0].upper()
+        parteB=partes[1].upper()
+        print(parteA,parteB)
+        linea = archivo.readline().strip()
+    archivo.close()
+
+    #Stock
+    archivo = open("./recursos/stock.txt","r")
+    linea = archivo.readline().strip()
+    while(linea != ""):
+        partes=linea.split(",")
+        parteA=partes[0].upper()
+        parteB=partes[1].upper()
+        parteC=partes[2].upper()
+        print(parteA,parteB,parteC)
         linea = archivo.readline().strip()
     archivo.close()
 
@@ -51,10 +89,13 @@ def escritura():
     mensajes.escrituraArchivosFin()
 
 #GLOBAL VARIABLES
-trabajadores = 0
-sucursales=0
-productos=0
-stock=0
+trabajadores = []
+trabajador = []
+sucursales = []
+sucursal = []
+productos = []
+producto = []
+stock = []
 
 #MAIN
 os.system("cls")
