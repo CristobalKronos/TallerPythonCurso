@@ -4,7 +4,10 @@ import time
 def saludo():
     print("Bienvenidos al programa.")
     time.sleep(1)
-    
+
+def despedida():
+    print("Muchas gracias por trabajar con nosotros.")
+
 def lecturaArchivoInicio():
     print("Iniciando la lectura de archivos:")
     time.sleep(1)

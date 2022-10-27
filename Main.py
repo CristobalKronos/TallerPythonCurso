@@ -13,7 +13,7 @@ Elementos evaluados:
 #IMPORT's
 import numpy as np
 import os
-from functions import Mensajes
+from functions import mensajes
 
 """ FUNCTIONS
 
@@ -27,15 +27,23 @@ def menu():
 
 #LECTURA DE ARCHIVOS    
 def lectura():
-    print("Iniciando lectura de archivos.")
+    mensajes.lecturaArchivoInicio()
+    archivo = open("archivo.txt","r")
+    linea = archivo.readline().strip()
+    while(linea != ""):
+        partes=linea.split(",")
+        parteA=partes[0].upper()
+        parteB=partes[1].upper()
+        print(parteA,parteB)
+        linea = archivo.readline().strip()
+    archivo.close()
 
 
-
-    print("Fin de la lectura.")
+    mensajes.lecturaArchivosFin()
 
 #ESCRITURA DE ARCHIVOS
 def Escritura():
-    print("Iniciando la escritura de archivos.")
+    print("Iniciando la escritura de archivos.")    
 
 
 
@@ -48,8 +56,10 @@ respWhile = 0
 
 #MAIN
 os.system("cls")
+mensajes.saludo()
+lectura()
 while respWhile != "0":
     respWhile = menu()
 
 
-print("Gracias por trabajar con nosotros.")
+mensajes.despedida()
