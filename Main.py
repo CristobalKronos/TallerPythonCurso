@@ -52,6 +52,8 @@ def menu():
             setProducto()
         elif temp == "7":
             setStock()
+        elif temp == "0":
+            print("Cerrando el sistema.")
         else:
             print("Respuesta invalida, vuelva a intentarlo")
             time.sleep(1)
@@ -123,8 +125,27 @@ def lectura():
 #TODO: Iniciar la escritura y update
 def escritura():
     mensajes.escrituraArchivosInicio() 
+    #Trabajadores
+    archivo = open("./recursos/trabajadores.txt","a+")
+    for i in trabajadores:
+        aux = 0
+        for j in i:
+            archivo.write(j[aux] + ",")
+            aux+=1
+        archivo.write("\n")
+    archivo.close()
+    #Productos
+    archivo = open("./recursos/productos.txt","a+")
 
+    archivo.close()
+    #Sucursales
+    archivo = open("./recursos/sucursales.txt","a+")
 
+    archivo.close()
+    #Stock
+    archivo = open("./recursos/stock.txt","a+")
+    
+    archivo.close()
     mensajes.escrituraArchivosFin()
 
 #AGREGAR TRABAJADOR
