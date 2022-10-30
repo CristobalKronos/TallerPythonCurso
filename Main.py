@@ -122,10 +122,10 @@ def lectura():
     mensajes.lecturaArchivosFin()
 
 #ESCRITURA DE ARCHIVOS
-#TODO: Iniciar la escritura y update
 def escritura():
     mensajes.escrituraArchivosInicio() 
     #Trabajadores
+    #FIXME: Lanza error de fuera de rango
     archivo = open("./recursos/trabajadores.txt","a+")
     for i in trabajadores:
         aux = 0
