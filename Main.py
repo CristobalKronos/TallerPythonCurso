@@ -179,8 +179,8 @@ def addSucursal():
     os.system("cls")
     print("AGREGAR SUCURSAL:")
     #Solicitar datos de la sucursal
-    auxId = input("Ingrese Id de la sucursal")
-    auxCiudad = input("Inserte Ciudad de la sucursal")
+    auxId = input("Ingrese Id de la sucursal: ")
+    auxCiudad = input("Inserte Ciudad de la sucursal: ")
     #Buscar si ya está la sucursal
     auxBool = "0"
     for i in sucursales:
@@ -188,12 +188,12 @@ def addSucursal():
             auxBool = "1"
     #De estar la sucursal, mandar un aviso y terminar la función
     if auxBool == "1":
-        print("Error: La sucursal ya existe")
+        print("Error: La sucursal ya existe.")
         return()
     #De no estar la sucursal, agregarla al final de la lista
     else:
         auxSucursal = [auxId, auxCiudad]
-        print("El trabajador a sido intgresado correctamente")
+        print("La sucursal a sido intgresada correctamente")
     #Informar que los cambios están hechos
     time.sleep(1)
 
@@ -202,10 +202,23 @@ def addProducto():
     os.system("cls")
     print("AGREGAR PRODUCTO:")
     #Solicitar datos del producto
+    auxId = input("Ingrese Id del producto: ")
+    auxNombre = input("Ingrese nombre del producto: ")
     #Buscar si ya está el producto
+    auxBool = "0"
+    for i in productos:
+        if i[0] == auxId:
+            auxBool = "1"
     #De estar el producto, mandar un aviso y terminar la función
+    if auxBool == "1":
+        print("Error: El producto ya existe.")
+        return()
     #De no estar el producto, agregarlo al final de la lista
+    else:
+        auxProducto = [auxId, auxNombre]
+        print("El producto a sido ingresado correctamente")
     #Informar que los cambios están hechos
+    time.sleep(1)
 
 #ACTUALIZAR TRABAJADOR
 def setTrabajador():
