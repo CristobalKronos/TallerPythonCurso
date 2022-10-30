@@ -1,0 +1,4 @@
+Trabajadores: Nombre, Rut, Cargo, Sueldo, IdSurursal
+Sucursal: IdSurursal, Ciudad
+Producto: IdProducto, Nombre
+Stock: IdSucursal, Producto, Cantidad

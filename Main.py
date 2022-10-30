@@ -9,6 +9,7 @@ Elementos evaluados:
 """
 
 #IMPORT's
+from pickle import FALSE, TRUE
 import numpy as np
 import os
 import time
@@ -131,11 +132,25 @@ def addTrabajador():
     os.system("cls")
     print("AGREGAR TRABAJADOR:")
     #Solicitar datos del trabajador
+    auxNombre = input("Ingrese Nombre del trabajador: ")
+    auxRut = input("Ingrese Rut del trabajador: ")
+    auxCargo = input("Ingrese Cargo del trabajador: ")
+    auxSueldo = input("Ingrese Sueldo del trabajador: ")
+    auxSucursal = input("Ingrese ID de Sucursal del trabajador: ")
     #Buscar si ya está el trabajador
+    auxBool = 0
+    for i in trabajadores:
+        if i[1] == auxRut:
+            auxBool = 1
     #De estar el trabajador, mandar un aviso y terminar la función
+    if auxBool == "1":
+        print("Error: El trabajador ya existe")
+        return()
     #De no estar el trabajdor, agregarlo al final de la lista
+    else:
+        auxTrabajador = [auxNombre, auxRut, auxCargo, auxSueldo, auxSucursal]
+        print("El trabajador a sido ingresado correctamente")
     #Informar que los cambios están hechos
-
     time.sleep(1)
 
 #AGREGAR SUCURSAL
