@@ -125,12 +125,12 @@ def lectura():
 def escritura():
     mensajes.escrituraArchivosInicio() 
     #Trabajadores
-    #FIXME: Lanza error de fuera de rango
+    #FIXME: Falta que limpie el .txt antes de escribir
     archivo = open("./recursos/trabajadores.txt","a+")
     for i in trabajadores:
         aux = 0
         for j in i:
-            archivo.write(j[aux] + ",")
+            archivo.write(j + ",")
             aux+=1
         archivo.write("\n")
     archivo.close()
