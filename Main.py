@@ -179,10 +179,23 @@ def addSucursal():
     os.system("cls")
     print("AGREGAR SUCURSAL:")
     #Solicitar datos de la sucursal
+    auxId = input("Ingrese Id de la sucursal")
+    auxCiudad = input("Inserte Ciudad de la sucursal")
     #Buscar si ya está la sucursal
+    auxBool = "0"
+    for i in sucursales:
+        if i[0] == auxId:
+            auxBool = "1"
     #De estar la sucursal, mandar un aviso y terminar la función
+    if auxBool == "1":
+        print("Error: La sucursal ya existe")
+        return()
     #De no estar la sucursal, agregarla al final de la lista
+    else:
+        auxSucursal = [auxId, auxCiudad]
+        print("El trabajador a sido intgresado correctamente")
     #Informar que los cambios están hechos
+    time.sleep(1)
 
 #AGREGAR PRODUCTO
 def addProducto():
