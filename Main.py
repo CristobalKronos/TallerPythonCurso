@@ -345,7 +345,7 @@ def setStock():
                 stock[count][2] = auxCant
                 return()
         count += 1
-    stock.append([idSucursal, idProducto, cantidad])
+    stock.append([auxIdSucursal, auxIdProducto, auxCant])
     #Informar que los cambios están hechos
     print("Los cambios se realizaron con éxito.")
 
