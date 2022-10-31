@@ -47,7 +47,7 @@ def menu():
         elif temp == "3":
             addProducto()
         elif temp == "4":
-            setProducto()
+            setTrabajador()
         elif temp == "5":
             setSucursal()
         elif temp == "6":
@@ -71,6 +71,8 @@ def lectura():
     linea = archivo.readline().strip()
     while(linea != ""):
         partes=linea.split(",")
+        count = 0
+        #trabajadores.append([partes[0].upper,partes[1].upper,partes[2].upper,partes[3].upper,partes[4].upper])
         for i in partes:
             trabajador.append(i.upper())
         print(trabajador)
@@ -128,13 +130,15 @@ def escritura():
     mensajes.escrituraArchivosInicio() 
     #Trabajadores
     #FIXME: Falta que limpie el .txt antes de escribir
-    archivo = open("./recursos/trabajadores.txt","a+")
+    archivo = open("./recursos/trabajadores.txt","w+")
+    print(trabajadores)
     for i in trabajadores:
         aux = 0
-        for j in i:
-            archivo.write(j + ",")
-            aux+=1
-        archivo.write("\n")
+        archivo.write(i[0] + "," + i[1] + "," + i[2] + "," + i[3] + "," + i[4] + "\n")
+        #for j in i:
+        #    archivo.write(j + ",")
+        #    aux+=1
+        #archivo.write("\n")
     archivo.close()
     #Productos
     archivo = open("./recursos/productos.txt","a+")
@@ -150,7 +154,7 @@ def escritura():
     archivo.close()
     mensajes.escrituraArchivosFin()
 
-#AGREGAR TRABAJADOR
+#AGREGAR TRABAJADOR Listo
 def addTrabajador():
     os.system("cls")
     print("AGREGAR TRABAJADOR:")
@@ -171,12 +175,13 @@ def addTrabajador():
         return()
     #De no estar el trabajdor, agregarlo al final de la lista
     else:
-        auxTrabajador = [auxNombre, auxRut, auxCargo, auxSueldo, auxSucursal]
+        trabajadores.append([auxNombre, auxRut, auxCargo, auxSueldo, auxSucursal])
+        #auxTrabajador = [auxNombre, auxRut, auxCargo, auxSueldo, auxSucursal]
         print("El trabajador a sido ingresado correctamente")
     #Informar que los cambios están hechos
     time.sleep(1)
 
-#AGREGAR SUCURSAL
+#AGREGAR SUCURSAL Listo
 def addSucursal():
     os.system("cls")
     print("AGREGAR SUCURSAL:")
@@ -194,12 +199,13 @@ def addSucursal():
         return()
     #De no estar la sucursal, agregarla al final de la lista
     else:
-        auxSucursal = [auxId, auxCiudad]
+        sucursales.append([auxId, auxCiudad])
+        #auxSucursal = [auxId, auxCiudad]
         print("La sucursal a sido intgresada correctamente")
     #Informar que los cambios están hechos
     time.sleep(1)
 
-#AGREGAR PRODUCTO
+#AGREGAR PRODUCTO Listo
 def addProducto():
     os.system("cls")
     print("AGREGAR PRODUCTO:")
@@ -217,7 +223,8 @@ def addProducto():
         return()
     #De no estar el producto, agregarlo al final de la lista
     else:
-        auxProducto = [auxId, auxNombre]
+        productos.append([auxId,auxNombre])
+        #auxProducto = [auxId, auxNombre]
         print("El producto a sido ingresado correctamente")
     #Informar que los cambios están hechos
     time.sleep(1)
