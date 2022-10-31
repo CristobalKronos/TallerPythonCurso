@@ -9,4 +9,5 @@ Producto: IdProducto, Nombre
 Stock: IdSucursal, Producto, Cantidad
 
 El programa debe ser capaz de leer los archivos y guardar los cambios, poder agregar nuevos datos y borrar los ya existentes
-y, finalmente poder graficar la cantidad de stock por producto en , junto con los sueldos promedio de los locales.
+y, finalmente poder graficar la cantidad de stock de un producto ingresado por el usuario en cada sucursal, 
+junto con los sueldos promedio de los locales.

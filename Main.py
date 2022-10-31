@@ -360,11 +360,8 @@ def setStock():
     #Informar que los cambios están hechos
     print("Los cambios se realizaron con éxito.")
 
-#GRAFICAR
-#TODO: Graficos.
-def graficar():
-    print("")
-
+#GRAFICOS
+def graficoPromedioSueldos():
     #TABLA PROMEDIO SUELDOS
 
     #Crear las tablas
@@ -386,6 +383,7 @@ def graficar():
     plt.ylabel("Sueldo Promedio")
     plt.show()
 
+def graficoStockSucursal():
     #TABLA STOCK SUCURSAL
 
     producto = int(input("Ingrese ID de producto: "))
