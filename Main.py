@@ -14,6 +14,8 @@ import numpy as np
 import os
 import time
 from functions import mensajes
+import matplotlib as plt
+
 
 
 """ FUNCTIONS
@@ -302,18 +304,53 @@ def setProducto():
     productos[pos][0] = auxId
     productos[pos][1] = auxNombre
     #Informar que los cambios están hechos
-    print("Los cambios se realizaron con éxito.")
+    print("Los cambios se realizaron con éxito.")  
 
 #ACTUALIZAR STOCK
 def setStock():
     os.system("cls")
     print("ACTUALIZAR STOCK:")
     #Solicitar los cambios a realizar
+    auxIdSucursal = input("Ingrese Id de la sucursal: ")
+    auxIdProducto = input("Ingrese Id del producto: ")
+    auxCant = input("Ingrese nueva cantidad: ")
     #Buscar si ya existe la sucursal y el producto
+    auxBoolSucursal = "0"
+    auxBoolProducto = "0"
+    #posSucursal = 0
+    #posProducto = 0
+    count = 0
+    for i in productos:
+        if i[0] == auxIdProducto:
+            auxBoolProducto = "1"
+            #posProducto = count
+        count += 1
+    for j in sucursales:
+        if j[0] == auxIdSucursal:
+            auxBoolSucursal = "1"
+            #posSucursal = count
+        count += 1
     #De faltar uno de ellos, mandar aviso y terminar la función
-    #De estar los dos, verificar si los cambios son congruentes (No eliminar más de lo que realmente hay)
-    #De estar todo en orden, agregar los cambios al final de la lista
+    if auxBoolProducto == "0":
+        print("Error: El producto o la sucursal no existe.")
+        return()
+    if auxBoolSucursal == "0":
+        print("Error: El producto o la sucursal no existe.")
+        return()
+    #De estar todo en orden, agregar los cambios
+    count = 0
+    for i in stock:
+        if i[0] == auxIdSucursal:
+            if i[1] == auxIdProducto:
+                stock[count][2] = auxCant
+                return()
+        count += 1
+    stock.append([idSucursal, idProducto, cantidad])
     #Informar que los cambios están hechos
+    print("Los cambios se realizaron con éxito.")
+
+#GRAFICAR
+#TODO: Graficos.
 
 #GLOBAL VARIABLES
 trabajadores = []
