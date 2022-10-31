@@ -291,7 +291,7 @@ def setSucursal():
     #Informar que los cambios están hechos
     print("Los cambios se realizaron con éxito.")
 
-#ACTUALIZAR PRODUCTO
+#ACTUALIZAR PRODUCTO Listo
 def setProducto():
     os.system("cls")
     print("ACTUALIZAR PRODUCTO:")
