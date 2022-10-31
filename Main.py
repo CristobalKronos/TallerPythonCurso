@@ -225,11 +225,32 @@ def setTrabajador():
     os.system("cls")
     print("ACTUALIZAR TRABAJADOR:")
     #Solicitar datos del trabajador
+    auxNombre = input("Ingrese Nombre del trabajador: ")
+    auxRut = input("Ingrese Rut del trabajador: ")
+    auxCargo = input("Ingrese Cargo del trabajador: ")
+    auxSueldo = input("Ingrese Sueldo del trabajador: ")
+    auxIdSucursal = input("Ingrese Id de la Sucursal del trabajador: ")
+    pos = 0
+    cont = 0
     #Buscar si ya está el trabajador
+    auxBool = "0"
+    for i in trabajadores:
+        if i[1] == auxRut:
+            auxBool = "1"
+            pos = cont
+        cont += 1
     #De no estar el trabajdor, mandar aviso y terminar la función
-    #De estar el trabajador, solicitar los nuevos datos
+    if auxBool == "0":
+        print("Error: El trabajador no existe.")
+        return()
     #Actualizar la información del trabajador
+    trabajadores[pos][0] = auxNombre
+    trabajadores[pos][1] = auxRut
+    trabajadores[pos][2] = auxCargo
+    trabajadores[pos][3] = auxSueldo
+    trabajadores[pos][4] = auxIdSucursal
     #Informar que los cambios están hechos
+    print("Los cambios se realizaron con éxito.")
 
 #ACTUALIZAR SUCURSAL
 def setSucursal():
