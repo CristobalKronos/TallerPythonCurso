@@ -35,8 +35,8 @@ def menu():
         print("5|Actualizar una sucursal")
         print("6|Actualizar un producto")
         print("7|Actualiar stock")
-        #print("8|Graficar X")
-        #print("9|Graficar Y")
+        print("A|Graficar Promedio de sueldos")
+        print("B|Graficar Stock en sucursales")
         temp = input("Inserte respuesta: ")
 
 
@@ -56,6 +56,10 @@ def menu():
             setStock()
         elif temp == "0":
             print("Cerrando el sistema.")
+        elif temp.upper() == "A":
+            graficoPromedioSueldos()
+        elif temp.upper() == "B":
+            graficoStockSucursal()
         else:
             print("Respuesta invalida, vuelva a intentarlo")
             time.sleep(1)
