@@ -115,10 +115,12 @@ def lectura():
     archivo = open("./recursos/stock.txt","r")
     linea = archivo.readline().strip()
     while(linea != ""):
+        auxList = []
         partes=linea.split(",")
         for i in partes:
-            stock.append(i.upper())
+            auxList.append(i.upper())
         print(stock)
+        stock.append(auxList.copy())
         linea = archivo.readline().strip()
     archivo.close()
 
@@ -135,22 +137,24 @@ def escritura():
     for i in trabajadores:
         aux = 0
         archivo.write(i[0] + "," + i[1] + "," + i[2] + "," + i[3] + "," + i[4] + "\n")
-        #for j in i:
-        #    archivo.write(j + ",")
-        #    aux+=1
-        #archivo.write("\n")
     archivo.close()
     #Productos
-    archivo = open("./recursos/productos.txt","a+")
-
+    archivo = open("./recursos/productos.txt","w+")
+    print(productos)
+    for i in productos:
+        archivo.write(i[0] + "," + i[1] + "\n")
     archivo.close()
     #Sucursales
-    archivo = open("./recursos/sucursales.txt","a+")
-
+    archivo = open("./recursos/sucursales.txt","w+")
+    for i in sucursales:
+        print(sucursales)
+        archivo.write(i[0] + "," + i[1] + "\n")
     archivo.close()
     #Stock
-    archivo = open("./recursos/stock.txt","a+")
-    
+    archivo = open("./recursos/stock.txt","w+")
+    print(stock)
+    for i in stock:
+        archivo.write(i[0] + "," + i[1] + "," + i[2] + "\n")
     archivo.close()
     mensajes.escrituraArchivosFin()
 
@@ -229,7 +233,7 @@ def addProducto():
     #Informar que los cambios están hechos
     time.sleep(1)
 
-#ACTUALIZAR TRABAJADOR
+#ACTUALIZAR TRABAJADOR Listo
 def setTrabajador():
     os.system("cls")
     print("ACTUALIZAR TRABAJADOR:")
@@ -261,7 +265,7 @@ def setTrabajador():
     #Informar que los cambios están hechos
     print("Los cambios se realizaron con éxito.")
 
-#ACTUALIZAR SUCURSAL
+#ACTUALIZAR SUCURSAL Listo
 def setSucursal():
     os.system("cls")
     print("ACTUALIZAR SUCURSAL:")
@@ -283,7 +287,7 @@ def setSucursal():
         return()
     #Actualizar la información de la sucursal
     sucursales[pos][0] = auxId
-    sucursales[pos][0] = auxCiudad
+    sucursales[pos][1] = auxCiudad
     #Informar que los cambios están hechos
     print("Los cambios se realizaron con éxito.")
 
