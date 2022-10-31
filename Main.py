@@ -317,7 +317,7 @@ def setProducto():
     #Informar que los cambios están hechos
     print("Los cambios se realizaron con éxito.")  
 
-#ACTUALIZAR STOCK
+#ACTUALIZAR STOCK Listo
 def setStock():
     os.system("cls")
     print("ACTUALIZAR STOCK:")
@@ -362,6 +362,26 @@ def setStock():
 
 #GRAFICAR
 #TODO: Graficos.
+def graficar():
+    print("")
+    #Crear las tablas
+    promSueldos = []
+    nomSucursales = []
+    #Almacenar datos necesarios
+    for i in sucursales:
+        nomSucursales.append(i[1])
+        suma = 0
+        cont = 1
+        for j in trabajadores:
+            if j[4] == i[0]:
+                suma += j[3]
+                cont+=1
+        promSueldos.append(suma/cont)
+    #Funciones de graficos
+    plt.bar(nomSucursales, promSueldos)
+    plt.xlabel("Sucursales")
+    plt.ylabel("Sueldo Promedio")
+    plt.show()
 
 #GLOBAL VARIABLES
 trabajadores = []
