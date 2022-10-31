@@ -21,7 +21,7 @@ import matplotlib as plt
 """ FUNCTIONS
 
 """
-#MENU
+#MENU LISTO
 def menu():
     temp = 1
     while temp != "0":
@@ -66,7 +66,7 @@ def menu():
             
     return temp
 
-#LECTURA DE ARCHIVOS    
+#LECTURA DE ARCHIVOS LISTO   
 def lectura():
     mensajes.lecturaArchivoInicio()
 
@@ -121,37 +121,45 @@ def lectura():
 
     mensajes.lecturaArchivosFin()
 
-#ESCRITURA DE ARCHIVOS
+#ESCRITURA DE ARCHIVOS LISTO
 def escritura():
-    mensajes.escrituraArchivosInicio() 
+    mensajes.escrituraArchivosInicio()
+
     #Trabajadores
-    #FIXME: Falta que limpie el .txt antes de escribir
-    archivo = open("./recursos/trabajadores.txt","w+")
+    print("Trabajadores:")
     print(trabajadores)
+    archivo = open("./recursos/trabajadores.txt","w+")
     for i in trabajadores:
-        aux = 0
         archivo.write(i[0] + "," + i[1] + "," + i[2] + "," + i[3] + "," + i[4] + "\n")
     archivo.close()
+
     #Productos
-    archivo = open("./recursos/productos.txt","w+")
+    print("Productos:")
     print(productos)
+    archivo = open("./recursos/productos.txt","w+")
     for i in productos:
         archivo.write(i[0] + "," + i[1] + "\n")
     archivo.close()
+
     #Sucursales
+    print("Sucursales:")
+    print(sucursales)
     archivo = open("./recursos/sucursales.txt","w+")
     for i in sucursales:
-        print(sucursales)
         archivo.write(i[0] + "," + i[1] + "\n")
     archivo.close()
+
     #Stock
-    archivo = open("./recursos/stock.txt","w+")
+    print("Stock")
     print(stock)
+    archivo = open("./recursos/stock.txt","w+")
     for i in stock:
         archivo.write(i[0] + "," + i[1] + "," + i[2] + "\n")
     archivo.close()
+
     mensajes.escrituraArchivosFin()
 
+#TODO:Los agregar deben ingresar los datos con .upper()
 #AGREGAR TRABAJADOR
 def addTrabajador():
     os.system("cls")
