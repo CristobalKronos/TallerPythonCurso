@@ -119,7 +119,6 @@ def lectura():
         linea = archivo.readline().strip()
     archivo.close()
 
-
     mensajes.lecturaArchivosFin()
 
 #ESCRITURA DE ARCHIVOS
@@ -153,7 +152,7 @@ def escritura():
     archivo.close()
     mensajes.escrituraArchivosFin()
 
-#AGREGAR TRABAJADOR Listo
+#AGREGAR TRABAJADOR
 def addTrabajador():
     os.system("cls")
     print("AGREGAR TRABAJADOR:")
@@ -180,7 +179,7 @@ def addTrabajador():
     #Informar que los cambios están hechos
     time.sleep(1)
 
-#AGREGAR SUCURSAL Listo
+#AGREGAR SUCURSAL
 def addSucursal():
     os.system("cls")
     print("AGREGAR SUCURSAL:")
@@ -204,7 +203,7 @@ def addSucursal():
     #Informar que los cambios están hechos
     time.sleep(1)
 
-#AGREGAR PRODUCTO Listo
+#AGREGAR PRODUCTO
 def addProducto():
     os.system("cls")
     print("AGREGAR PRODUCTO:")
@@ -228,7 +227,7 @@ def addProducto():
     #Informar que los cambios están hechos
     time.sleep(1)
 
-#ACTUALIZAR TRABAJADOR Listo
+#ACTUALIZAR TRABAJADOR
 def setTrabajador():
     os.system("cls")
     print("ACTUALIZAR TRABAJADOR:")
@@ -260,7 +259,7 @@ def setTrabajador():
     #Informar que los cambios están hechos
     print("Los cambios se realizaron con éxito.")
 
-#ACTUALIZAR SUCURSAL Listo
+#ACTUALIZAR SUCURSAL
 def setSucursal():
     os.system("cls")
     print("ACTUALIZAR SUCURSAL:")
@@ -286,7 +285,7 @@ def setSucursal():
     #Informar que los cambios están hechos
     print("Los cambios se realizaron con éxito.")
 
-#ACTUALIZAR PRODUCTO Listo
+#ACTUALIZAR PRODUCTO
 def setProducto():
     os.system("cls")
     print("ACTUALIZAR PRODUCTO:")
@@ -312,7 +311,7 @@ def setProducto():
     #Informar que los cambios están hechos
     print("Los cambios se realizaron con éxito.")  
 
-#ACTUALIZAR STOCK Listo
+#ACTUALIZAR STOCK
 def setStock():
     os.system("cls")
     print("ACTUALIZAR STOCK:")
