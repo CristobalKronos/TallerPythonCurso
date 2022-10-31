@@ -364,6 +364,9 @@ def setStock():
 #TODO: Graficos.
 def graficar():
     print("")
+
+    #TABLA PROMEDIO SUELDOS
+
     #Crear las tablas
     promSueldos = []
     nomSucursales = []
@@ -381,6 +384,28 @@ def graficar():
     plt.bar(nomSucursales, promSueldos)
     plt.xlabel("Sucursales")
     plt.ylabel("Sueldo Promedio")
+    plt.show()
+
+    #TABLA STOCK SUCURSAL
+
+    producto = int(input("Ingrese ID de producto: "))
+    #Crear tablas
+    nomSucursales = []
+    stockTotal = []
+    sum = 0
+    #Almacenar datos
+    for i in sucursales:
+      nomSucursales.append(i[1])
+      sum = 0
+      for j in stock:
+        if j[0] == i[0]:
+          if j[1] == producto:
+            sum+=j[2]
+      stockTotal.append(sum)
+    #Graficos
+    plt.bar(nomSucursales, stockTotal)
+    plt.xlabel("Sucursales")
+    plt.ylabel("Stock")
     plt.show()
 
 #GLOBAL VARIABLES
