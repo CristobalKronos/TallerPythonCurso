@@ -21,7 +21,7 @@ import matplotlib as plt
 """ FUNCTIONS
 
 """
-#MENU LISTO
+#MENU
 def menu():
     temp = 1
     while temp != "0":
@@ -66,7 +66,7 @@ def menu():
             
     return temp
 
-#LECTURA DE ARCHIVOS LISTO   
+#LECTURA DE ARCHIVOS
 def lectura():
     mensajes.lecturaArchivoInicio()
 
@@ -121,7 +121,7 @@ def lectura():
 
     mensajes.lecturaArchivosFin()
 
-#ESCRITURA DE ARCHIVOS LISTO
+#ESCRITURA DE ARCHIVOS
 def escritura():
     mensajes.escrituraArchivosInicio()
 
@@ -159,8 +159,7 @@ def escritura():
 
     mensajes.escrituraArchivosFin()
 
-#TODO:Los agregar deben ingresar los datos con .upper()
-#AGREGAR TRABAJADOR LISTO
+#AGREGAR TRABAJADOR
 def addTrabajador():
     os.system("cls")
     print("AGREGAR TRABAJADOR:")
@@ -191,7 +190,7 @@ def addTrabajador():
 
     time.sleep(1)
 
-#AGREGAR SUCURSAL LISTO
+#AGREGAR SUCURSAL
 def addSucursal():
     os.system("cls")
     print("AGREGAR SUCURSAL:")
@@ -220,7 +219,7 @@ def addSucursal():
 
     time.sleep(1)
 
-#AGREGAR PRODUCTO LISTO
+#AGREGAR PRODUCTO
 def addProducto():
     os.system("cls")
     print("AGREGAR PRODUCTO:")
@@ -249,7 +248,7 @@ def addProducto():
 
     time.sleep(1)
 
-#ACTUALIZAR TRABAJADOR LISTO
+#ACTUALIZAR TRABAJADOR
 def setTrabajador():
     os.system("cls")
     print("ACTUALIZAR TRABAJADOR:")
@@ -286,7 +285,7 @@ def setTrabajador():
     #Informar que los cambios están hechos
     print("Los cambios se realizaron con éxito.")
 
-#ACTUALIZAR SUCURSAL LISTO
+#ACTUALIZAR SUCURSAL
 def setSucursal():
     os.system("cls")
     print("ACTUALIZAR SUCURSAL:")
@@ -317,7 +316,7 @@ def setSucursal():
     #Informar que los cambios están hechos
     print("Los cambios se realizaron con éxito.")
 
-#ACTUALIZAR PRODUCTO LISTO
+#ACTUALIZAR PRODUCTO
 def setProducto():
     os.system("cls")
     print("ACTUALIZAR PRODUCTO:")
@@ -348,7 +347,7 @@ def setProducto():
     #Informar que los cambios están hechos
     print("Los cambios se realizaron con éxito.")  
 
-#ACTUALIZAR STOCK LISTO
+#ACTUALIZAR STOCK 
 def setStock():
     os.system("cls")
     print("ACTUALIZAR STOCK:")
@@ -393,7 +392,7 @@ def setStock():
     #Informar que los cambios están hechos
     print("Los cambios se realizaron con éxito.")
 
-#GRAFICOS LISTO
+#GRAFICOS 
 def graficoPromedioSueldos():#TABLA PROMEDIO SUELDOS
 
     #Crear las tablas
