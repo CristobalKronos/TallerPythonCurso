@@ -186,10 +186,9 @@ def addTrabajador():
     #De no estar el trabajdor, agregarlo al final de la lista
     else:
         trabajadores.append([auxNombre, auxRut, auxCargo, auxSueldo, auxSucursal])
-        #auxTrabajador = [auxNombre, auxRut, auxCargo, auxSueldo, auxSucursal]
-        print("El trabajador a sido ingresado correctamente")
-
     #Informar que los cambios están hechos
+    print("El trabajador a sido ingresado correctamente")
+
     time.sleep(1)
 
 #AGREGAR SUCURSAL LISTO
@@ -215,35 +214,39 @@ def addSucursal():
     #De no estar la sucursal, agregarla al final de la lista
     else:
         sucursales.append([auxId, auxCiudad])
-        print("La sucursal a sido intgresada correctamente.")
 
     #Informar que los cambios están hechos
     print("La sucursal fue ingresada correctamente")
 
     time.sleep(1)
 
-#AGREGAR PRODUCTO
+#AGREGAR PRODUCTO LISTO
 def addProducto():
     os.system("cls")
     print("AGREGAR PRODUCTO:")
+
     #Solicitar datos del producto
-    auxId = input("Ingrese Id del producto: ")
-    auxNombre = input("Ingrese nombre del producto: ")
+    auxId = input("Ingrese Id del producto: ").upper()
+    auxNombre = input("Ingrese nombre del producto: ").upper()
+
     #Buscar si ya está el producto
     auxBool = "0"
     for i in productos:
         if i[0] == auxId:
             auxBool = "1"
+
     #De estar el producto, mandar un aviso y terminar la función
     if auxBool == "1":
         print("Error: El producto ya existe.")
         return()
+
     #De no estar el producto, agregarlo al final de la lista
     else:
         productos.append([auxId,auxNombre])
-        #auxProducto = [auxId, auxNombre]
-        print("El producto a sido ingresado correctamente")
+
     #Informar que los cambios están hechos
+    print("El producto a sido ingresado correctamente")
+
     time.sleep(1)
 
 #ACTUALIZAR TRABAJADOR
