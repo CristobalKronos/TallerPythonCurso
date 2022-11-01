@@ -14,7 +14,7 @@ import numpy as np
 import os
 import time
 from functions import mensajes
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
 
 
@@ -406,7 +406,7 @@ def graficoPromedioSueldos():#TABLA PROMEDIO SUELDOS
         cont = 1
         for j in trabajadores:
             if j[4] == i[0]:
-                suma += j[3]
+                suma += int(j[3])
                 cont+=1
         promSueldos.append(suma/cont)
 
@@ -431,8 +431,8 @@ def graficoStockSucursal():#TABLA STOCK SUCURSAL
       sum = 0
       for j in stock:
         if j[0] == i[0]:
-          if j[1] == producto:
-            sum+=j[2]
+          if int(j[1]) == producto:
+            sum+=int(j[2])
       stockTotal.append(sum)
 
     #Graficos
