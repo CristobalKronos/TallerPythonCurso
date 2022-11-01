@@ -286,13 +286,15 @@ def setTrabajador():
     #Informar que los cambios están hechos
     print("Los cambios se realizaron con éxito.")
 
-#ACTUALIZAR SUCURSAL
+#ACTUALIZAR SUCURSAL LISTO
 def setSucursal():
     os.system("cls")
     print("ACTUALIZAR SUCURSAL:")
+
     #Solicitar datos de la sucursal
     auxId = input("Ingrese Id de la sucursal: ")
     auxCiudad = input("Ingrese Ciudad de la sucursal: ")
+
     #Buscar si ya está la sucursal
     auxBool = "0"
     pos = 0
@@ -302,13 +304,16 @@ def setSucursal():
             auxBool = "1"
             pos = count
         count += 1
+
     #De no estar la sucursal, mandar aviso y terminar la función
     if auxBool == 0:
         print("Error: La sucursal no existe.")
         return()
+
     #Actualizar la información de la sucursal
     sucursales[pos][0] = auxId
     sucursales[pos][1] = auxCiudad
+
     #Informar que los cambios están hechos
     print("Los cambios se realizaron con éxito.")
 
