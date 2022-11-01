@@ -160,30 +160,35 @@ def escritura():
     mensajes.escrituraArchivosFin()
 
 #TODO:Los agregar deben ingresar los datos con .upper()
-#AGREGAR TRABAJADOR
+#AGREGAR TRABAJADOR LISTO
 def addTrabajador():
     os.system("cls")
     print("AGREGAR TRABAJADOR:")
+
     #Solicitar datos del trabajador
-    auxNombre = input("Ingrese Nombre del trabajador: ")
-    auxRut = input("Ingrese Rut del trabajador: ")
-    auxCargo = input("Ingrese Cargo del trabajador: ")
-    auxSueldo = input("Ingrese Sueldo del trabajador: ")
-    auxSucursal = input("Ingrese ID de Sucursal del trabajador: ")
+    auxNombre = input("Ingrese Nombre del trabajador: ").upper()
+    auxRut = input("Ingrese Rut del trabajador: ").upper()
+    auxCargo = input("Ingrese Cargo del trabajador: ").upper()
+    auxSueldo = input("Ingrese Sueldo del trabajador: ").upper()
+    auxSucursal = input("Ingrese ID de Sucursal del trabajador: ").upper()
+
     #Buscar si ya está el trabajador
     auxBool = 0
     for i in trabajadores:
         if i[1] == auxRut:
             auxBool = 1
+
     #De estar el trabajador, mandar un aviso y terminar la función
     if auxBool == "1":
         print("Error: El trabajador ya existe")
         return()
+
     #De no estar el trabajdor, agregarlo al final de la lista
     else:
         trabajadores.append([auxNombre, auxRut, auxCargo, auxSueldo, auxSucursal])
         #auxTrabajador = [auxNombre, auxRut, auxCargo, auxSueldo, auxSucursal]
         print("El trabajador a sido ingresado correctamente")
+
     #Informar que los cambios están hechos
     time.sleep(1)
 
