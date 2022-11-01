@@ -348,37 +348,38 @@ def setProducto():
     #Informar que los cambios están hechos
     print("Los cambios se realizaron con éxito.")  
 
-#ACTUALIZAR STOCK
+#ACTUALIZAR STOCK LISTO
 def setStock():
     os.system("cls")
     print("ACTUALIZAR STOCK:")
+
     #Solicitar los cambios a realizar
     auxIdSucursal = input("Ingrese Id de la sucursal: ")
     auxIdProducto = input("Ingrese Id del producto: ")
     auxCant = input("Ingrese nueva cantidad: ")
+
     #Buscar si ya existe la sucursal y el producto
     auxBoolSucursal = "0"
     auxBoolProducto = "0"
-    #posSucursal = 0
-    #posProducto = 0
+
     count = 0
     for i in productos:
         if i[0] == auxIdProducto:
             auxBoolProducto = "1"
-            #posProducto = count
         count += 1
     for j in sucursales:
         if j[0] == auxIdSucursal:
             auxBoolSucursal = "1"
-            #posSucursal = count
         count += 1
+
     #De faltar uno de ellos, mandar aviso y terminar la función
-    if auxBoolProducto == "0":
+    if auxBoolProducto == 0:
         print("Error: El producto o la sucursal no existe.")
         return()
-    if auxBoolSucursal == "0":
+    if auxBoolSucursal == 0:
         print("Error: El producto o la sucursal no existe.")
         return()
+
     #De estar todo en orden, agregar los cambios
     count = 0
     for i in stock:
@@ -388,6 +389,7 @@ def setStock():
                 return()
         count += 1
     stock.append([auxIdSucursal, auxIdProducto, auxCant])
+
     #Informar que los cambios están hechos
     print("Los cambios se realizaron con éxito.")
 
