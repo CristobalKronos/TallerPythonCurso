@@ -317,13 +317,15 @@ def setSucursal():
     #Informar que los cambios están hechos
     print("Los cambios se realizaron con éxito.")
 
-#ACTUALIZAR PRODUCTO
+#ACTUALIZAR PRODUCTO LISTO
 def setProducto():
     os.system("cls")
     print("ACTUALIZAR PRODUCTO:")
+
     #Solicitar datos del producto
     auxId = input("Ingrese Id del producto: ")
     auxNombre = input("Ingrese Nombre del producto: ")
+
     #Buscar si ya está el producto
     auxBool = "0"
     pos = 0
@@ -333,13 +335,16 @@ def setProducto():
             auxBool = "1"
             pos = count
         count += 1
+
     #De no estar el producto, mandar aviso y terminar la función
     if auxBool == 0:
         print("Error: El producto no existe.")
         return()
+
     #Actualizar la información del producto
     productos[pos][0] = auxId
     productos[pos][1] = auxNombre
+
     #Informar que los cambios están hechos
     print("Los cambios se realizaron con éxito.")  
 
