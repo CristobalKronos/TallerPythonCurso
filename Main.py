@@ -393,13 +393,13 @@ def setStock():
     #Informar que los cambios están hechos
     print("Los cambios se realizaron con éxito.")
 
-#GRAFICOS
-def graficoPromedioSueldos():
-    #TABLA PROMEDIO SUELDOS
+#GRAFICOS LISTO
+def graficoPromedioSueldos():#TABLA PROMEDIO SUELDOS
 
     #Crear las tablas
     promSueldos = []
     nomSucursales = []
+
     #Almacenar datos necesarios
     for i in sucursales:
         nomSucursales.append(i[1])
@@ -410,20 +410,22 @@ def graficoPromedioSueldos():
                 suma += j[3]
                 cont+=1
         promSueldos.append(suma/cont)
+
     #Funciones de graficos
     plt.bar(nomSucursales, promSueldos)
     plt.xlabel("Sucursales")
     plt.ylabel("Sueldo Promedio")
     plt.show()
 
-def graficoStockSucursal():
-    #TABLA STOCK SUCURSAL
+def graficoStockSucursal():#TABLA STOCK SUCURSAL
 
     producto = int(input("Ingrese ID de producto: "))
+
     #Crear tablas
     nomSucursales = []
     stockTotal = []
     sum = 0
+
     #Almacenar datos
     for i in sucursales:
       nomSucursales.append(i[1])
@@ -433,6 +435,7 @@ def graficoStockSucursal():
           if j[1] == producto:
             sum+=j[2]
       stockTotal.append(sum)
+
     #Graficos
     plt.bar(nomSucursales, stockTotal)
     plt.xlabel("Sucursales")
