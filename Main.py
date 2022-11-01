@@ -454,12 +454,10 @@ stock = []
 #MAIN
 os.system("cls")
 mensajes.saludo()
+
 lectura()
 
 resp = menu()
-
-
-
 
 escritura()
 mensajes.despedida()
